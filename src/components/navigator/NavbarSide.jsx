@@ -15,6 +15,9 @@ export default function NavbarSide() {
           <p className="nav-title">{menu}</p>
         </div>
       ))}
+      <div className='sidebar-thingy'>
+      <img src="src\assets\icons\arrow_right_double.svg" />
+      </div>
     </div>
   );
 }
