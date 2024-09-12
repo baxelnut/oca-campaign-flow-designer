@@ -1,0 +1,47 @@
+.navbar-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  height: 77px;
+  box-shadow: 0px 0px 7px 0px #bfbfc0;
+  box-shadow: 0px 4px 4px 0px #00000040;
+  border-end-start-radius: 15px;
+  border-end-end-radius: 15px;
+  padding-inline: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.oca-logo {
+  height: 50%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.telkom-logo {
+  height: 90%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+}
+
+.profile-picture {
+  height: 60%;
+}
+
+.username {
+  padding-inline: 15px;
+}
+
+.settings {
+  margin-left: 15px;
+  margin-right: 45px;
+}

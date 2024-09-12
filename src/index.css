@@ -4,9 +4,12 @@
   --font-weight-medium: 500;
   --font-weight-bold: 700;
 
-  --color-text-light: rgba(33, 53, 71, 0.87);
-  --color-text-dark: rgba(255, 255, 255, 0.87);
-
+  --color-text-light: rgba(
+    33,
+    53,
+    71,
+    0.87
+  ); /* Dark text on light background */
   --color-primary: #646cff;
   --color-primary-hover: #535bf2;
 
@@ -14,8 +17,9 @@
   font-weight: var(--font-weight-normal);
   line-height: 1.5;
 
-  color-scheme: light dark;
-  color: var(--color-text-dark);
+  /* Always light mode */
+  color: var(--color-text-light); /* Light mode text color */
+  background-color: #fafbfc; /* Light mode background color */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -31,7 +35,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   font-family: var(--font-family);
-  background-color: #1a1a1a;
+  background-color: #ffffff; /* Light mode body background */
 }
 
 h1 {
@@ -56,8 +60,8 @@ button {
   font-size: 1em;
   font-weight: var(--font-weight-medium);
   font-family: inherit;
-  background-color: #1a1a1a;
-  color: var(--color-text-dark);
+  background-color: #f9f9f9; /* Light mode button background */
+  color: var(--color-text-light);
   cursor: pointer;
   transition: border-color 0.25s, background-color 0.25s;
 }
@@ -67,24 +71,4 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: var(--color-text-light);
-    background-color: #ffffff;
-  }
-
-  body {
-    background-color: #ffffff;
-  }
-
-  a:hover {
-    color: #747bff;
-  }
-
-  button {
-    background-color: #f9f9f9;
-    color: var(--color-text-light);
-  }
 }

@@ -40,3 +40,9 @@
 .read-the-docs {
   color: #888;
 }
+
+/* content */
+.content {
+  background-color: red;
+  height: 100vh;
+}
