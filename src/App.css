@@ -41,8 +41,14 @@
   color: #888;
 }
 
+.navbar{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
 /* content */
-.content {
+/* .content {
   background-color: red;
   height: 100vh;
-}
+} */

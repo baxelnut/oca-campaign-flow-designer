@@ -1,16 +1,17 @@
-import './App.css'
-import NavbarHeader from './components/navigator/NavbarHeader'
+import './App.css';
+import NavbarHeader from './components/navigator/NavbarHeader';
+import NavbarSide from './components/navigator/NavbarSide';
 
 function App() {
-
   return (
     <>
-     <NavbarHeader></NavbarHeader>
-     <div className='content'>
-      ladidah
-     </div>
+      <nav className="navbar">
+        <NavbarSide></NavbarSide>
+        <NavbarHeader></NavbarHeader>
+      </nav>
+      {/* <div className="content">ladidah</div> */}
     </>
-  )
+  );
 }
 
-export default App
+export default App;
