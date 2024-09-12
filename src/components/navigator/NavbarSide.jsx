@@ -3,6 +3,7 @@ import './NavbarSide.css';
 
 export default function NavbarSide() {
   const [isCollapsed, setIsCollapsed] = useState(false);
+  const [selectedMenu, setSelectedMenu] = useState('Dashboard');
 
   const toggleSidebar = () => {
     setIsCollapsed(!isCollapsed);
@@ -13,14 +14,23 @@ export default function NavbarSide() {
   return (
     <div className={`navbar-side ${isCollapsed ? 'collapsed' : ''}`}>
       {menus.map((menu, index) => (
-        <div key={index} className={`nav-item ${isCollapsed ? 'collapsed' : ''}`}>
+        <div
+          key={index}
+          className={`nav-item ${isCollapsed ? 'collapsed' : ''}`}
+          onClick={() => setSelectedMenu(menu)}
+        >
           <img
-            className="nav-icon"
+            className={`nav-icon ${selectedMenu === menu ? 'selected' : ''}`}
             src={`src/assets/icons/${menu.toLowerCase()}.svg`}
             alt={menu}
           />
-          {/* Hide title when collapsed */}
-          {!isCollapsed && <p className="nav-title">{menu}</p>}{' '}
+          {!isCollapsed && (
+            <p
+              className={`nav-title ${selectedMenu === menu ? 'selected' : ''}`}
+            >
+              {menu}
+            </p>
+          )}
         </div>
       ))}
       <div className="sidebar-thingy" onClick={toggleSidebar}>
