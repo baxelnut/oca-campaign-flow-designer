@@ -12,7 +12,7 @@
 }
 
 .navbar-side.collapsed {
-  width: 5%;
+  width: 6%;
 }
 
 .nav-item {
@@ -55,10 +55,12 @@
   font-weight: normal;
   transition: font-weight 0.3s ease;
   cursor: pointer;
+  color: #adadad;
 }
 
 .nav-title.selected {
   font-weight: bold;
+  color: #070909;
 }
 
 .navbar-side.collapsed .nav-title {
@@ -82,5 +84,5 @@
 }
 
 .navbar-side.collapsed .sidebar-thingy {
-  left: 5%;
+  left: 6%;
 }
