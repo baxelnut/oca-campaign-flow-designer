@@ -1,4 +1,6 @@
 import React from 'react';
+import { buildStyles, CircularProgressbar } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
 
 export default function SuccessRate() {
   const items = [
@@ -28,15 +30,15 @@ export default function SuccessRate() {
       },
     },
     {
-      leading: 'Email Quota',
+      leading: 'Email',
       title: 50.769,
       trailing: 'Mails',
 
       barpercentage: 30,
       color: {
-        background: '#98E2B4',
-        frontground: '#297837',
-        barcolor: '#297837',
+        background: '#F7427A',
+        frontground: '#FFFFFF',
+        barcolor: '#FFA500',
       },
       details: {
         blasting: {
@@ -73,7 +75,17 @@ export default function SuccessRate() {
               <h2 className="title">{item.title.toString()}</h2>
               <p className="trailing">{item.trailing}</p>
             </div>
-            <div className="bar">adwad</div>
+            <div
+              className="bar"
+              style={{
+                stroke: item.color.barcolor,
+              }}
+            >
+              <CircularProgressbar
+                value={item.barpercentage}
+                text={`${item.barpercentage}%`}
+              />
+            </div>
           </div>
         </>
       );
