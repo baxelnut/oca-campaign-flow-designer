@@ -2,15 +2,14 @@ import React from 'react';
 
 export default function ContactButtons() {
   return (
-    <div className="contact-buttons">
-      <button className="refresh">
+    <div className="button-container">
+      <button className="button refresh">
         <img src="src/assets/icons/refresh.svg" />
         <p>Refresh</p>
       </button>
-
-      <button className="add-broadcast">
-        <img src="src/assets/icons/add.svg" />
-        <p>Add Broadcast</p>
+      <button className="button plus">
+        <img src="src/assets/icons/plus.svg" />
+        <p>Create Contact</p>
       </button>
     </div>
   );
