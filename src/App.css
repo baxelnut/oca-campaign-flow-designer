@@ -3,6 +3,7 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background-color: #fafbfc;
 }
 
 .logo {
@@ -41,10 +42,10 @@
   color: #888;
 }
 
-.navbar{
-display: flex;
-justify-content: center;
-align-items: center;
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* content */

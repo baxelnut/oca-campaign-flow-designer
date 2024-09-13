@@ -1,0 +1,80 @@
+.dashboard {
+  position: absolute;
+  top: 80px;
+  left: 15%;
+  right: 0%;
+  height: 100vh;
+  padding-bottom: 80px;
+}
+
+.head-content {
+  background: linear-gradient(90deg, #e81255 2.5%, #e81255 32%, #db225c 35%);
+  box-shadow: 0px 1px 2px 0px #0000004d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 10px;
+  gap: 10px;
+  margin-inline: 2%;
+  margin-top: 2%;
+  height: fit-content;
+  text-align: center;
+}
+
+.oca-blast-logo {
+  padding-left: 6%;
+  height: 150px;
+}
+
+.quota {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 10px;
+  margin-inline: 2%;
+  margin-top: 2%;
+  color: black;
+}
+
+.remaining-quota {
+  width: 100%;
+  height: fit-content;
+  background-color: white;
+  box-shadow: 0px 8px 12px 6px #00000026;
+  border: 1px solid #c1c7d0;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.remaining-quota .leading,
+.remaining-quota .trailing {
+  width: fit-content;
+  height: fit-content;
+  margin-inline: auto;
+  border-radius: 100vh;
+  font-size: 12px;
+}
+
+.remaining-quota .leading {
+  background-color: red;
+  font-weight: bold;
+  padding: 3px;
+  padding-inline: 10px;
+}
+
+.remaining-quota .trailing {
+  font-weight: 100;
+  color: #6b778c;
+}
+
+.remaining-quota .title {
+  margin: auto;
+}
+
+.dashboard .group {
+  display: flex;
+  justify-content: space-between;
+}
