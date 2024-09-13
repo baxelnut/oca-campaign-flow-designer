@@ -1,0 +1,14 @@
+[
+  {
+    "leading": "WhatsApp Quota",
+    "title": 260.921,
+    "trailing": "Messages",
+    "color": { "background": "#98E2B4", "frontground": "#297837" }
+  },
+  {
+    "leading": "Email Quota",
+    "title": 176.131,
+    "trailing": "Mails",
+    "color": { "background": "#F7427A", "frontground": "#FFFFFF" }
+  }
+]

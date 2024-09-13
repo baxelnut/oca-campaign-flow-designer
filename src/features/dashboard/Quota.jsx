@@ -1,20 +1,17 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 export default function Quota() {
-  const items = [
-    {
-      leading: 'WhatsApp Quota',
-      title: 260.921,
-      trailing: 'Messages',
-      color: { background: '#98E2B4', frontground: '#297837' },
-    },
-    {
-      leading: 'Email Quota',
-      title: 176.131,
-      trailing: 'Mails',
-      color: { background: '#F7427A', frontground: '#FFFFFF' },
-    },
-  ];
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    fetch('src/data/quota_data.txt')
+      .then((response) => response.text())
+      .then((data) => {
+        const parsedData = JSON.parse(data);
+        setItems(parsedData);
+      })
+      .catch((error) => console.error('Error fetching data:', error));
+  }, []);
 
   const loadContent = () => {
     return items.map((item, index) => {

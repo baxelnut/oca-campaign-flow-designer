@@ -1,0 +1,52 @@
+[
+  {
+    "leading": "WhatsApp",
+    "title": 76.253,
+    "trailing": "Messages",
+    "barpercentage": 60,
+    "color": {
+      "background": "#98E2B4",
+      "frontground": "#297837",
+      "barcolor": "#297837"
+    },
+    "details": {
+      "blasting": {
+        "remaining": 62.358,
+        "title": "Blasting"
+      },
+      "instant": {
+        "remaining": 42.578,
+        "title": "Instant Messages"
+      },
+      "scheduler": {
+        "remaining": 19.781,
+        "title": "Scheduler Messages"
+      }
+    }
+  },
+  {
+    "leading": "Email",
+    "title": 50.769,
+    "trailing": "Mails",
+    "barpercentage": 30,
+    "color": {
+      "background": "#F7427A",
+      "frontground": "#FFFFFF",
+      "barcolor": "#FFA500"
+    },
+    "details": {
+      "blasting": {
+        "remaining": 84.763,
+        "title": "Blasting"
+      },
+      "instant": {
+        "remaining": 50.496,
+        "title": "Instant Messages"
+      },
+      "scheduler": {
+        "remaining": 34.267,
+        "title": "Scheduler Messages"
+      }
+    }
+  }
+]

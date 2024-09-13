@@ -4,7 +4,7 @@ export default function BroadcastActivities() {
   const [activities, setActivities] = useState([]);
 
   useEffect(() => {
-    fetch('src/features/dashboard/broadcast_data.txt')
+    fetch('src/data/broadcast_data.txt')
       .then((response) => response.json())
       .then((data) => setActivities(data))
       .catch((error) => console.error('Error fetching activities:', error));
