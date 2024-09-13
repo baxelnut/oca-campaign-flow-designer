@@ -16,7 +16,6 @@
 }
 
 .button {
-  background-color: red;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,6 +24,7 @@
   padding-block: 0;
   margin-left: 10px;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .button img {
@@ -114,48 +114,41 @@ td:last-child {
 
 /* PAGINATION */
 .pagination {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
-    margin-top: 10px;
-    font-size: 14px;
-  }
-  
-  .pagination-controls {
-    display: flex;
-    align-items: center;
-  }
-  
-  .pagination-controls select {
-    border: 1px solid #ddd;
-    padding: 4px;
-    border-radius: 4px;
-    margin-right: 10px;
-  }
-  
-  .pagination-controls button {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    padding: 5px 10px;
-    margin: 0 5px;
-    cursor: pointer;
-    border-radius: 4px;
-  }
-  
-  .pagination-controls button:hover {
-    background-color: #f2f2f2;
-  }
-  
-  .active-page {
-    background-color: #ff0047; /* Your red color */
-    color: black;
-    border-color: #ff0047;
-    font-weight: bolder;
-  }
-  
-  .pagination-controls button[disabled] {
-    background-color: #e0e0e0;
-    cursor: not-allowed;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.pagination-controls {
+  display: flex;
+  align-items: center;
+}
+
+.pagination-controls select {
+  border: 1px solid #ddd;
+  padding: 4px;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.pagination-controls button {
+  border: 1px solid #ddd;
+  padding: 5px 10px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.active-page {
+  background-color: #a5132f;
+  color: white;
+  font-weight: bolder;
+}
+
+.pagination-controls button[disabled] {
+  background-color: #e0e0e0;
+  cursor: not-allowed;
+}
