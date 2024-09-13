@@ -3,21 +3,28 @@ import './NavbarSide.css';
 import { Link, useLocation } from 'react-router-dom';
 
 export default function NavbarSide() {
-  const [isCollapsed, setIsCollapsed] = useState(false);
-  const [selectedMenu, setSelectedMenu] = useState('Dashboard');
+  const [isCollapsed, setIsCollapsed] = useState(() => {
+    const savedState = localStorage.getItem('sidebarCollapsed');
+    return savedState ? JSON.parse(savedState) : false;
+  });
+  const [selectedMenu, setSelectedMenu] = useState('dashboard');
   const location = useLocation();
 
   const toggleSidebar = () => {
-    setIsCollapsed(!isCollapsed);
+    setIsCollapsed((prevState) => {
+      const newState = !prevState;
+      localStorage.setItem('sidebarCollapsed', JSON.stringify(newState));
+      return newState;
+    });
   };
 
   const menus = ['Dashboard', 'Contact', 'Broadcast', 'Template', 'Statistic'];
 
   useEffect(() => {
-    const currentPath = location.pathname.slice(1);
-    const currentMenu =
-      menus.find((menu) => menu.toLowerCase() === currentPath) || 'Dashboard';
-    setSelectedMenu(currentMenu);
+    const currentPath = location.pathname.slice(1).toLowerCase();
+    const matchedMenu =
+      menus.find((menu) => menu.toLowerCase() === currentPath) || 'dashboard';
+    setSelectedMenu(matchedMenu);
   }, [location.pathname]);
 
   return (

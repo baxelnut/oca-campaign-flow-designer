@@ -10,6 +10,14 @@ import Statistic from './features/StatisticPage';
 import PageNotFound from './features/PageNotFound';
 
 function App() {
+  const components = [
+    { path: '/dashboard', Component: Dashboard },
+    { path: '/contact', Component: Contact },
+    { path: '/broadcast', Component: Broadcast },
+    { path: '/template', Component: Template },
+    { path: '/statistic', Component: Statistic },
+  ];
+
   return (
     <>
       <Router>
@@ -18,12 +26,10 @@ function App() {
           <NavbarHeader />
         </nav>
         <Routes>
+          {components.map(({ path, Component }, index) => (
+            <Route key={index} path={path} element={<Component />} />
+          ))}
           <Route path="/" element={<Dashboard />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/broadcast" element={<Broadcast />} />
-          <Route path="/template" element={<Template />} />
-          <Route path="/statistic" element={<Statistic />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </Router>
