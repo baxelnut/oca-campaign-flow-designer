@@ -1,0 +1,10 @@
+.contact {
+  position: absolute;
+  top: 80px;
+  left: 15%;
+  right: 0%;
+  height: 100vh;
+  padding-bottom: 80px;
+  margin-inline: 2%;
+  text-align: left;
+}
