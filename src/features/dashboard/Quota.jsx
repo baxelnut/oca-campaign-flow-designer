@@ -6,15 +6,13 @@ export default function Quota() {
       leading: 'WhatsApp Quota',
       title: 260.921,
       trailing: 'Messages',
-      background: '#98E2B4',
-      frontground: '#297837',
+      color: { background: '#98E2B4', frontground: '#297837' },
     },
     {
       leading: 'Email Quota',
       title: 176.131,
       trailing: 'Mails',
-      background: '#F7427A',
-      frontground: '#FFFFFF',
+      color: { background: '#F7427A', frontground: '#FFFFFF' },
     },
   ];
 
@@ -25,8 +23,8 @@ export default function Quota() {
           <p
             className="leading"
             style={{
-              background: item.background,
-              color: item.frontground,
+              background: item.color.background,
+              color: item.color.frontground,
             }}
           >
             {item.leading}

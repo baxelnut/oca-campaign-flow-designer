@@ -5,6 +5,7 @@
   right: 0%;
   height: 100vh;
   padding-bottom: 80px;
+  margin-inline: 2%;
 }
 
 .head-content {
@@ -16,7 +17,6 @@
   color: white;
   border-radius: 10px;
   gap: 10px;
-  margin-inline: 2%;
   margin-top: 2%;
   height: fit-content;
   text-align: center;
@@ -27,19 +27,20 @@
   height: 150px;
 }
 
-.quota {
+.quota,
+.success {
   display: flex;
-  position: absolute;
+  position: relative;
   flex-direction: column;
   justify-content: start;
   align-items: start;
   gap: 10px;
-  margin-inline: 2%;
   margin-top: 2%;
   color: black;
 }
 
-.remaining-quota {
+.remaining-quota,
+.success-rate {
   width: 100%;
   height: fit-content;
   background-color: white;
@@ -50,7 +51,9 @@
 }
 
 .remaining-quota .leading,
-.remaining-quota .trailing {
+.remaining-quota .trailing,
+.success-rate .leading,
+.success-rate .trailing {
   width: fit-content;
   height: fit-content;
   margin-inline: auto;
@@ -58,23 +61,77 @@
   font-size: 12px;
 }
 
-.remaining-quota .leading {
+.remaining-quota .leading,
+.success-rate .leading {
   background-color: red;
   font-weight: bold;
   padding: 3px;
   padding-inline: 10px;
 }
 
-.remaining-quota .trailing {
+.remaining-quota .trailing,
+.success-rate .trailing {
   font-weight: 100;
   color: #6b778c;
 }
 
-.remaining-quota .title {
+.remaining-quota .title,
+.success-rate .title {
   margin: auto;
 }
 
 .dashboard .group {
   display: flex;
+  /* justify-content: space-between; */
+  align-items: start;
+  height: fit-content;
+}
+
+.success {
+  margin-inline: 8%;
+  /* width: 100%; */
+  flex: auto;
+}
+
+.success .container {
+  display: flex;
+  width: 110%;
+}
+
+.success .container-details {
+  display: flex;
+  width: 110%;
+}
+
+.success-rate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5%;
+}
+
+.success-rate .bar {
+  margin-inline-start: 30%;
+}
+
+.success .details {
+  color: white;
+  border-radius: 4px;
+  box-shadow: 0px 8px 40px 0px #00000033;
+  width: 200%;
+}
+
+.success .details.mid {
+  margin-inline: 2%;
+}
+
+.success .details p {
+  font-size: 12px;
+}
+
+.success .group {
+  display: flex;
+  width: 100%;
   justify-content: space-between;
+  margin-right: 5%;
 }
