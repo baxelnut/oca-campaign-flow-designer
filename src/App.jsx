@@ -5,7 +5,7 @@ import NavbarSide from './components/navigator/NavbarSide';
 import Dashboard from './features/dashboard/Dashboard';
 import Contact from './features/contact/ContactPage';
 import Broadcast from './features/BroadcastPage';
-import Template from './features/TemplatePage';
+import Template from './features/template/TemplatePage';
 import Statistic from './features/StatisticPage';
 import PageNotFound from './features/PageNotFound';
 import FeedbackNav from './components/util/FeedbackNav';

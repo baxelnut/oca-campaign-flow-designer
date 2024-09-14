@@ -18,7 +18,7 @@ export default function NavbarSide() {
     });
   };
 
-  const menus = ['Dashboard', 'Contact', 'Broadcast', 'Template', 'Statistic'];
+  const menus = ['Dashboard', 'Contact', 'Broadcast', 'Template'];
 
   useEffect(() => {
     const currentPath = location.pathname.slice(1).toLowerCase();

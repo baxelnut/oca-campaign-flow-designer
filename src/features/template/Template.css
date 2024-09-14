@@ -1,0 +1,80 @@
+.template-page {
+  position: absolute;
+  top: 80px;
+  left: 15%;
+  right: 0%;
+  height: 100vh;
+  padding-bottom: 80px;
+  margin-inline: 2%;
+  text-align: left;
+  color: black;
+}
+
+.button-container {
+  padding-block: 1%;
+  border-bottom: 2px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button-container .dropdown {
+  display: flex;
+  width: fit-content;
+}
+
+.button-container .dropdown button {
+  background-color: white;
+  margin-right: 10%;
+  border-radius: 100px;
+  color: black;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-block: 5%;
+}
+
+.button-container .dropdown button:hover {
+  background-color: #ca114b;
+  color: white;
+  border-color: transparent;
+  img {
+    filter: brightness(0) invert(1);
+  }
+}
+
+button img {
+  margin-left: 10px;
+  height: 70%;
+}
+
+.button-container .action {
+  display: flex;
+  justify-content: end;
+  width: 50%;
+}
+
+.button-container .action button {
+  margin-left: 10%;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.action .draft {
+  background-color: #ebecf0;
+  color: #6B778C;
+}
+
+.action .create {
+  background-color: #a5132f;
+  color: white;
+  display: flex;
+  align-items: center;
+  img {
+    margin-right: 10px;
+    margin-left: 0;
+  }
+}
