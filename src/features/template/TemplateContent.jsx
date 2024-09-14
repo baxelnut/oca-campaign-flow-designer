@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import ContactTable from '../contact/ContactTable';
 import TemplateTable from './TemplateTable';
+import TemplateCard from './TemplateCard';
 
 export default function TemplateContent() {
   const [items, setItems] = useState([]);
@@ -41,7 +41,7 @@ export default function TemplateContent() {
               </div>
             </div>
             <div className="details">
-              <TemplateTable/>
+              {item.title == 'WhatsApp' ? <TemplateTable /> : <TemplateCard />}
             </div>
           </React.Fragment>
         );

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { LoremIpsum } from 'lorem-ipsum';
+import Pagination from '../../components/util/Pagination';
 import './Template.css';
 
 const TemplateTable = () => {
@@ -9,22 +10,18 @@ const TemplateTable = () => {
 
   const templateData = Array.from({ length: 50 }, (_, i) => ({
     id: i + 1,
-    groupName: lorem.generateWords(2 + (i % 3)), // generates a name with 2-4 words
+    groupName: lorem.generateWords(2 + (i % 3)),
     dateModified: '12-06-2024 12:12',
-    total: Math.floor(Math.random() * 113), // random total between 0-112
+    total: Math.floor(Math.random() * 113),
   }));
 
   const handleClick = (type, value) => alert(`${type}: ${value}`);
 
-  // Pagination logic
   const lastIndex = currentPage * perPage;
   const firstIndex = lastIndex - perPage;
   const currentTemplates = templateData.slice(firstIndex, lastIndex);
 
   const totalPages = Math.ceil(templateData.length / perPage);
-
-  const handlePageChange = (pageNumber) => setCurrentPage(pageNumber);
-  const handlePerPageChange = (event) => setPerPage(Number(event.target.value));
 
   return (
     <div>
@@ -80,40 +77,17 @@ const TemplateTable = () => {
           ))}
         </tbody>
       </table>
-      <div className="pagination">
-        <div>
-          Showing {firstIndex + 1} - {Math.min(lastIndex, templateData.length)}{' '}
-          from {templateData.length}
-        </div>
-        <div className="pagination-controls">
-          <select value={perPage} onChange={handlePerPageChange}>
-            <option value="5">5</option>
-            <option value="10">10</option>
-            <option value="15">15</option>
-          </select>
-          <button
-            onClick={() => handlePageChange(currentPage - 1)}
-            disabled={currentPage === 1}
-          >
-            &lt;
-          </button>
-          {[...Array(totalPages)].map((_, i) => (
-            <button
-              key={i}
-              className={currentPage === i + 1 ? 'active-page' : ''}
-              onClick={() => handlePageChange(i + 1)}
-            >
-              {i + 1}
-            </button>
-          ))}
-          <button
-            onClick={() => handlePageChange(currentPage + 1)}
-            disabled={currentPage === totalPages}
-          >
-            &gt;
-          </button>
-        </div>
-      </div>
+
+      <Pagination
+        perPage={perPage}
+        setPerPage={setPerPage}
+        currentPage={currentPage}
+        totalPages={totalPages}
+        totalItems={templateData.length}
+        firstIndex={firstIndex}
+        lastIndex={lastIndex}
+        handlePageChange={setCurrentPage}
+      />
     </div>
   );
 };
