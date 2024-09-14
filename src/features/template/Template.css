@@ -65,7 +65,7 @@ button img {
 
 .action .draft {
   background-color: #ebecf0;
-  color: #6B778C;
+  color: #6b778c;
 }
 
 .action .create {
@@ -77,4 +77,40 @@ button img {
     margin-right: 10px;
     margin-left: 0;
   }
+}
+
+.content {
+  margin-top: 5%;
+}
+
+.content .header {
+  box-shadow: 0px 1px 4px 0px #00000040;
+}
+
+.content .head-item {
+  margin-inline: 5%;
+  display: flex;
+  align-items: center;
+}
+
+.content .head-item img {
+  margin-right: 1%;
+  padding-right: 1%;
+  border-right: 1px solid #C1C7D0;
+}
+
+.content .head-item p {
+  color: #6b778c;
+  margin-top: 0;
+}
+
+.content .head-item h2 {
+  margin-bottom: 0;
+  color: #091e42;
+}
+
+.content .details {
+  background-color: red;
+  margin-bottom: 10%;
+  margin-top: 20px;
 }
