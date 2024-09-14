@@ -35,13 +35,15 @@
   padding-block: 5%;
 }
 
-.button-container .dropdown button:hover {
+.button-container .dropdown button:hover,
+.button-container .dropdown button.selected {
   background-color: #ca114b;
   color: white;
   border-color: transparent;
-  img {
-    filter: brightness(0) invert(1);
-  }
+}
+
+.button-container .dropdown button.selected img {
+  filter: brightness(0) invert(1);
 }
 
 button img {
@@ -96,7 +98,7 @@ button img {
 .content .head-item img {
   margin-right: 1%;
   padding-right: 1%;
-  border-right: 1px solid #C1C7D0;
+  border-right: 1px solid #c1c7d0;
 }
 
 .content .head-item p {
@@ -110,7 +112,11 @@ button img {
 }
 
 .content .details {
-  background-color: red;
   margin-bottom: 10%;
   margin-top: 20px;
+}
+
+.template-checkbox{
+    margin-right: 10px;
+    
 }

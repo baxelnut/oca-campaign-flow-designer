@@ -1,28 +1,27 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import ContactTable from '../contact/ContactTable';
+import TemplateTable from './TemplateTable';
 
-export default function TemplateContent(title) {
-  const items = [
-    {
-      title: 'WhatsApp',
-      description: 'here you can see your whatsapp template collections.',
-      bottom: '#35B86D',
-      background: '#EBF8F0',
-    },
-    {
-      title: 'Email',
-      description: 'here you can see your Email template collections.',
-      bottom: '#F6A0BB',
-      background: '#FEF3F6',
-    },
-  ];
+export default function TemplateContent() {
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    fetch('src/data/template_header.txt')
+      .then((response) => response.text())
+      .then((data) => {
+        const parsedData = JSON.parse(data);
+        setItems(parsedData);
+      })
+      .catch((error) => console.error('Error fetching data:', error));
+  }, []);
+
   return (
     <div className="content">
       {items.map((item, index) => {
         return (
-          <>
+          <React.Fragment key={index}>
             <div
               className="header"
-              key={index}
               style={{
                 background: item.background,
               }}
@@ -31,15 +30,20 @@ export default function TemplateContent(title) {
                 className="head-item"
                 style={{ borderBottom: `8px solid ${item.bottom}` }}
               >
-                <img src={`src/assets/icons/${item.title.toLowerCase()}.svg`} />
+                <img
+                  src={`src/assets/icons/${item.title.toLowerCase()}.svg`}
+                  alt={`${item.title} icon`}
+                />
                 <div>
                   <h2>{item.title}</h2>
                   <p>{item.description}</p>
                 </div>
               </div>
             </div>
-            <div className="details">a</div>
-          </>
+            <div className="details">
+              <TemplateTable/>
+            </div>
+          </React.Fragment>
         );
       })}
     </div>

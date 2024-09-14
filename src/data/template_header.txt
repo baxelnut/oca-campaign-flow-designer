@@ -1,0 +1,14 @@
+[
+  {
+    "title": "WhatsApp",
+    "description": "Here you can see your WhatsApp template collections.",
+    "bottom": "#35B86D",
+    "background": "#EBF8F0"
+  },
+  {
+    "title": "Email",
+    "description": "Here you can see your Email template collections.",
+    "bottom": "#F6A0BB",
+    "background": "#FEF3F6"
+  }
+]
