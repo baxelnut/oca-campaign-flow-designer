@@ -10,7 +10,7 @@ export default function TemplateButtons() {
   };
 
   const handleCreateTemplateClick = () => {
-    navigate('/template/create');
+    navigate('/create-template'); 
   };
 
   return (
@@ -22,7 +22,7 @@ export default function TemplateButtons() {
           onClick={() => handleButtonClick('Dashboard')}
         >
           Dashboard
-          <img src="/icons/arrow_down.svg" alt="Arrow Down" />
+          <img src="src/assets/icons/arrow_down.svg" />
         </button>
         <button
           type="button"
@@ -30,19 +30,15 @@ export default function TemplateButtons() {
           onClick={() => handleButtonClick('Term')}
         >
           Term
-          <img src="/icons/arrow_down.svg" alt="Arrow Down" />
+          <img src="src/assets/icons/arrow_down.svg" />
         </button>
       </div>
       <div className="action">
         <button className="draft" type="button">
           Draft
         </button>
-        <button
-          className="create"
-          type="button"
-          onClick={handleCreateTemplateClick}
-        >
-          <img src="src/assets/icons/plus.svg" alt="Plus" />
+        <button className="create" type="button" onClick={handleCreateTemplateClick} >
+          <img src="src/assets/icons/plus.svg" />
           Create Template
         </button>
       </div>

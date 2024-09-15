@@ -7,7 +7,7 @@ function TemplateCard() {
   const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
-    fetch('src/data/template_card.txt')
+    fetch('src/data/template_card.tx')
       .then((response) => response.json())
       .then((data) => setTemplateData(data))
       .catch((error) => console.error('Error fetching template data:', error));

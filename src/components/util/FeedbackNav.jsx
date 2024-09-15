@@ -4,7 +4,7 @@ import './FeedbackNav.css';
 export default function FeedbackNav() {
   return (
     <div className="feedback-nav">
-      <img src="\util\navbar_feedback.svg" />
+      <img src="src\assets\util\navbar_feedback.svg" alt="Feedback" />
     </div>
   );
 }
