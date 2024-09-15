@@ -18,26 +18,24 @@ function App() {
     { path: '/broadcast', Component: Broadcast },
     { path: '/template', Component: Template },
     { path: '/statistic', Component: Statistic },
-    { path: '/create-template', Component: CreateTemplate },
+    { path: '/template/create', Component: CreateTemplate },
   ];
 
   return (
-    <>
-      <Router>
-        <Routes>
-          {components.map(({ path, Component }, index) => (
-            <Route key={index} path={path} element={<Component />} />
-          ))}
-          <Route path="/" element={<Dashboard />} />
-          <Route path="*" element={<PageNotFound />} />
-        </Routes>
-        <nav className="navbar">
-          <NavbarSide />
-          <NavbarHeader />
-          <FeedbackNav />
-        </nav>
-      </Router>
-    </>
+    <Router>
+      <Routes>
+        {components.map(({ path, Component }, index) => (
+          <Route key={index} path={path} element={<Component />} />
+        ))}
+        <Route path="/" element={<Dashboard />} />
+        <Route path="*" element={<PageNotFound />} />
+      </Routes>
+      <nav className="navbar">
+        <NavbarSide />
+        <NavbarHeader />
+        <FeedbackNav />
+      </nav>
+    </Router>
   );
 }
 
