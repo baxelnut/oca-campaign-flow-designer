@@ -37,7 +37,7 @@ export default function NavbarSide() {
           >
             <img
               className={`nav-icon ${selectedMenu === menu ? 'selected' : ''}`}
-              src={`src/assets/icons/${menu.toLowerCase()}.svg`}
+              src={`/icons/${menu.toLowerCase()}.svg`}
               alt={menu}
             />
             {!isCollapsed && (
@@ -54,7 +54,7 @@ export default function NavbarSide() {
       ))}
       <div className="sidebar-thingy" onClick={toggleSidebar}>
         <img
-          src={`src/assets/icons/arrow_${
+          src={`/icons/arrow_${
             isCollapsed ? 'right' : 'left'
           }_double.svg`}
           alt="toggle-sidebar"
