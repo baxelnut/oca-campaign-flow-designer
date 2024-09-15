@@ -1,7 +1,7 @@
 import React from 'react';
 import './Template.css';
-import TemplateButtons from './TemplateButtons';
-import TemplateContent from './TemplateContent';
+import TemplateButtons from './page-components/TemplateButtons';
+import TemplateContent from './page-components/TemplateContent';
 
 export default function TemplatePage() {
   return (

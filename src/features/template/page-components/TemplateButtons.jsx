@@ -1,10 +1,16 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export default function TemplateButtons() {
   const [selectedButton, setSelectedButton] = useState('Dashboard');
+  const navigate = useNavigate();
 
   const handleButtonClick = (buttonName) => {
     setSelectedButton(buttonName);
+  };
+
+  const handleCreateTemplateClick = () => {
+    navigate('/create-template'); 
   };
 
   return (
@@ -31,7 +37,7 @@ export default function TemplateButtons() {
         <button className="draft" type="button">
           Draft
         </button>
-        <button className="create" type="button">
+        <button className="create" type="button" onClick={handleCreateTemplateClick} >
           <img src="src/assets/icons/plus.svg" />
           Create Template
         </button>

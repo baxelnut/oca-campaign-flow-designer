@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import TemplateTable from './TemplateTable';
-import TemplateCard from './TemplateCard';
-import TemplateForm from './TemplateForm';
+import TemplateTable from '../page-components/TemplateTable';
+import TemplateCard from '../page-components/TemplateCard';
+import TemplateForm from '../page-components/TemplateForm';
 
 export default function TemplateContent() {
   const [items, setItems] = useState([]);

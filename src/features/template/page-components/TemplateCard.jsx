@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Pagination from '../../components/util/Pagination';
+import Pagination from '../../../components/util/Pagination';
 
 function TemplateCard() {
   const [templateData, setTemplateData] = useState([]);

@@ -9,6 +9,7 @@ import Template from './features/template/TemplatePage';
 import Statistic from './features/StatisticPage';
 import PageNotFound from './features/PageNotFound';
 import FeedbackNav from './components/util/FeedbackNav';
+import CreateTemplate from './features/template/create-template/CreateTemplatePage';
 
 function App() {
   const components = [
@@ -17,6 +18,7 @@ function App() {
     { path: '/broadcast', Component: Broadcast },
     { path: '/template', Component: Template },
     { path: '/statistic', Component: Statistic },
+    { path: '/create-template', Component: CreateTemplate },
   ];
 
   return (

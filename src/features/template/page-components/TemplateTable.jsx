@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { LoremIpsum } from 'lorem-ipsum';
-import Pagination from '../../components/util/Pagination';
-import './Template.css';
+import Pagination from '../../../components/util/Pagination';
+import '../Template.css';
 
 const TemplateTable = () => {
   const lorem = new LoremIpsum();
