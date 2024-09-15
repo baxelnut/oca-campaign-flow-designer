@@ -1,0 +1,10 @@
+.wa-template {
+    position: absolute;
+    top: 80px;
+    left: 15%;
+    right: 0%;
+    height: 100%;
+    margin-inline: 2%;
+    text-align: left;
+    color: black;
+  }

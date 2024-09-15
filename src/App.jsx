@@ -10,6 +10,7 @@ import Statistic from './features/StatisticPage';
 import PageNotFound from './features/PageNotFound';
 import FeedbackNav from './components/util/FeedbackNav';
 import CreateTemplate from './features/template/create-template/CreateTemplatePage';
+import CreateWhatsAppTemplate from './features/template/create-template/whatsapp-template/CreateWhatsAppTemplate';
 
 function App() {
   const components = [
@@ -19,6 +20,7 @@ function App() {
     { path: '/template', Component: Template },
     { path: '/statistic', Component: Statistic },
     { path: '/template/create', Component: CreateTemplate },
+    { path: '/template/create/whatsapp_template', Component: CreateWhatsAppTemplate },
   ];
 
   return (
