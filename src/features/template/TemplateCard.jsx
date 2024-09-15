@@ -20,24 +20,24 @@ function TemplateCard() {
 
   return (
     <>
-      <div className='card-holder'>
-      {currentTemplates.map((template) => (
-        <div key={template.id} className="template-card">
-          <div className="header">
-            <div className="template-image">
-              <img src={template.image} alt="OCA logo" />
+      <div className="card-holder">
+        {currentTemplates.map((template) => (
+          <div key={template.id} className="template-card">
+            <div className="header">
+              <div className="template-image">
+                <img src={template.image} alt="Logo" />
+              </div>
+              <div className="template-body">
+                <h4>{template.title}</h4>
+                <p>{template.description}</p>
+              </div>
             </div>
-            <div className="template-body">
-              <h4>{template.title}</h4>
-              <p>{template.description}</p>
+            <div className="footer">
+              <h4>{template.footerTitle}</h4>
+              <a href="">{template.footerLink}</a>
             </div>
           </div>
-          <div className="footer">
-            <h4>{template.footerTitle}</h4>
-            <a href="">{template.footerLink}</a>
-          </div>
-        </div>
-      ))}
+        ))}
       </div>
       <Pagination
         perPage={perPage}
@@ -48,6 +48,7 @@ function TemplateCard() {
         firstIndex={firstIndex}
         lastIndex={lastIndex}
         handlePageChange={setCurrentPage}
+        showPerPageSelect={false} // Hide the per-page dropdown in TemplateCard
       />
     </>
   );

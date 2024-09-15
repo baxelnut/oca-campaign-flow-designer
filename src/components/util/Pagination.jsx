@@ -10,18 +10,23 @@ const Pagination = ({
   firstIndex,
   lastIndex,
   handlePageChange,
+  showPerPageSelect = true, // Default to true to show the dropdown
 }) => {
   const handlePerPageChange = (event) => setPerPage(Number(event.target.value));
 
   return (
     <div className="pagination">
-      <div>Showing {firstIndex + 1} - {Math.min(lastIndex, totalItems)} from {totalItems}</div>
+      <div>
+        Showing {firstIndex + 1} - {Math.min(lastIndex, totalItems)} from {totalItems}
+      </div>
       <div className="pagination-controls">
-        <select value={perPage} onChange={handlePerPageChange}>
-          <option value="5">5</option>
-          <option value="10">10</option>
-          <option value="15">15</option>
-        </select>
+        {showPerPageSelect && ( // Conditionally render the select dropdown
+          <select value={perPage} onChange={handlePerPageChange}>
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+          </select>
+        )}
         <button onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1}>
           &lt;
         </button>
