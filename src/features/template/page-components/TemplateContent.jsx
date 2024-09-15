@@ -76,7 +76,7 @@ export default function TemplateContent() {
               style={{ borderBottom: `8px solid ${item.bottom}` }}
             >
               <img
-                src={`src/assets/icons/${item.title.toLowerCase()}.svg`}
+                src={`/icons/${item.title.toLowerCase()}.svg`}
                 alt={`${item.title} icon`}
               />
               <div>

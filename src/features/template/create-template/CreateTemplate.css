@@ -3,9 +3,29 @@
   top: 80px;
   left: 15%;
   right: 0%;
-  height: 100vh;
-  padding-bottom: 80px;
+  height: 100%;
   margin-inline: 2%;
   text-align: left;
   color: black;
+}
+
+.create-template .container {
+  display: flex;
+  height: fit-content;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.create-template img {
+  width: 200px;
+  cursor: pointer;
+}
+
+.create-template .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
 }
