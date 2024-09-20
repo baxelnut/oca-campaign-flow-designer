@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 export default function LeadingButton() {
   const [selectedOption, setSelectedOption] = useState('none');
-  const [buttonCount, setButtonCount] = useState(1); 
+  const [buttonCount, setButtonCount] = useState(1);
 
   const handleSelectChange = (e) => {
     setSelectedOption(e.target.value);
@@ -10,7 +10,7 @@ export default function LeadingButton() {
 
   const handleAddButton = () => {
     if (buttonCount < 2) {
-      setButtonCount(buttonCount + 1); 
+      setButtonCount(buttonCount + 1);
     }
   };
 
@@ -28,14 +28,18 @@ export default function LeadingButton() {
             ? 'Create a button that links to a URL.'
             : 'No buttons selected.'}
         </label>
-        <select name="button" id="button" value={selectedOption} onChange={handleSelectChange}>
+        <select
+          name="button"
+          id="button"
+          value={selectedOption}
+          onChange={handleSelectChange}
+        >
           <option value="none">None</option>
           <option value="quick-replay">Quick Reply</option>
           <option value="linking">Linking</option>
         </select>
       </form>
 
-      {/* Conditionally render sections based on selected option */}
       {selectedOption === 'quick-replay' && (
         <div className="quick-reply-container">
           {/* Button 1 */}
@@ -49,17 +53,20 @@ export default function LeadingButton() {
             <div className="button-item">
               <p>Button 2</p>
               <input type="text" placeholder="Enter button text" />
-
             </div>
           )}
 
           {/* Add Button */}
           {buttonCount < 2 && (
-            <div className='button-placeholder'>
+            <div className="button-placeholder">
               <div></div>
-              <button type="button" className="add-button" onClick={handleAddButton}>
-              + Add another button
-            </button>
+              <button
+                type="button"
+                className="add-button"
+                onClick={handleAddButton}
+              >
+                + Add another button
+              </button>
             </div>
           )}
         </div>
