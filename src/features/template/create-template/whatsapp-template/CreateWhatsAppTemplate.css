@@ -48,3 +48,106 @@
 .action-button .button.submit:hover {
   background-color: #96173f;
 }
+
+.base {
+  background-color: white;
+  height: fit-content;
+  display: flex;
+  align-items: start;
+  padding-block: 2%;
+  margin-block: 3%;
+  border: 1px solid #d0d5dd;
+  box-shadow: 0px 1px 3px 0px #0000001a;
+}
+
+.base .back-button {
+  background-color: white;
+  width: 60px;
+  height: 60px;
+  margin-left: 1%;
+  box-shadow: 0px 0px 8px 0px #00000040;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.base .back-button img {
+  width: 30px;
+  height: 30px;
+}
+
+.base .base-content {
+  flex: auto;
+  height: fit-content;
+  margin-inline: 2%;
+}
+
+.base-content .terms {
+  background-color: #eaf2fd;
+  display: flex;
+  align-items: center;
+  padding-block: 0;
+  padding-inline: 1%;
+  border-radius: 8px;
+}
+
+.base-content .terms p {
+  font-weight: 600;
+  margin-inline: 10px;
+}
+
+.base-content .terms .head {
+  flex: auto;
+  display: flex;
+}
+
+.base-content .main {
+  margin-block: 2%;
+  display: flex;
+}
+
+.base-content .main .leading {
+  flex: 1.5;
+}
+
+.base-content .main .trailing {
+  background-color: blue;
+  flex: 1;
+}
+
+.leading p {
+  margin-inline: 0;
+  margin-block: 5px;
+  font-weight: bold;
+}
+
+.leading .template-name input {
+  background-color: white;
+  border: 1px solid #6b778c;
+  border-radius: 8px;
+  width: 50vh;
+  height: 5vh;
+  padding-inline: 10px;
+}
+
+.leading .header .title {
+  display: flex;
+  align-items: center;
+}
+
+.leading .header .title.box {
+  font-weight: 200;
+  font-size: 12px;
+  margin-left: 10px;
+  background-color: #ffc400;
+  border-radius: 100px;
+  padding-block: 2px;
+  padding-inline: 16px;
+}
+
+.header .dropdown {
+  font-weight: 200;
+  font-size: 12px;
+}
+
