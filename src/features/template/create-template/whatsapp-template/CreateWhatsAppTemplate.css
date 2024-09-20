@@ -131,12 +131,14 @@
   padding-inline: 10px;
 }
 
-.leading .header .title {
+.leading .header .title,
+.leading .leading-button .title {
   display: flex;
   align-items: center;
 }
 
-.leading .header .title.box {
+.leading .header .title.box,
+.leading .leading-button .title.box {
   font-weight: 200;
   font-size: 12px;
   margin-left: 10px;
@@ -152,8 +154,17 @@
 }
 
 .template-name,
-.header {
+.header,
+.body,
+.variables,
+.leading-button {
   margin-bottom: 20px;
+}
+
+.leading .dropdown select {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
 }
 
 .leading .body .dropdown {
@@ -162,4 +173,112 @@
 
 .body .quill {
   margin-top: 10px;
+}
+
+.variables .button-grid {
+  width: 60vh;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 12px;
+}
+
+.variable-btn {
+  background-color: #e0e0e0;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.variable-btn:hover {
+  background-color: #d3d3d3;
+}
+
+.plus-sign {
+  color: #007bff;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.dropdown select {
+  margin-block: 10px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.quick-reply-container,
+.linking-container {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  width: 60vh;
+}
+
+.button-item,
+.link-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block: 5px;
+}
+
+.button-item,
+.link-item label {
+  font-size: 14px;
+}
+
+.button-item,
+.link-item input {
+  width: 35vh;
+  height: 30px;
+  border-radius: 5px;
+}
+
+.button-item {
+  display: flex;
+  width: 60vh;
+  justify-content: space-between;
+}
+
+.button-item input {
+  display: flex;
+  width: 50%;
+  border: 1px solid #6b778c;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px;
+}
+
+.button-placeholder {
+  display: flex;
+  justify-content: space-between;
+  width: 60vh;
+}
+
+.add-button {
+  background-color: #ff2d55;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  padding-inline: 5px;
+  padding-block: 8px;
+  width: 50%;
+}
+
+.add-button:hover {
+  background-color: #e6003f;
+}
+
+.quick-reply-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

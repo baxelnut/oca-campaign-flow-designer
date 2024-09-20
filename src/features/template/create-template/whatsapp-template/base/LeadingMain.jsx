@@ -2,6 +2,8 @@ import React from 'react';
 import LeadingTemplateName from './LeadingTemplateName';
 import LeadingHeader from './LeadingHeader';
 import LeadingBody from './LeadingBody';
+import LeadingVariables from './LeadingVariables';
+import LeadingButton from './LeadingButton';
 
 export default function LeadingMain() {
   return (
@@ -9,6 +11,8 @@ export default function LeadingMain() {
       <LeadingTemplateName />
       <LeadingHeader />
       <LeadingBody />
+      <LeadingVariables />
+      <LeadingButton/>
     </div>
   );
 }
