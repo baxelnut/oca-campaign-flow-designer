@@ -1,10 +1,50 @@
 .wa-template {
-    position: absolute;
-    top: 80px;
-    left: 15%;
-    right: 0%;
-    height: 100%;
-    margin-inline: 2%;
-    text-align: left;
-    color: black;
-  }
+  position: absolute;
+  top: 80px;
+  left: 15%;
+  right: 0%;
+  height: 100%;
+  margin-inline: 2%;
+  text-align: left;
+  color: black;
+}
+
+.action-button {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.action-button .button {
+  height: 100%;
+  margin-block: 0;
+  margin-left: 4%;
+  padding-inline: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.action-button .button p {
+  margin-block: 8px;
+}
+
+.action-button .button.draft {
+  background-color: #ebecf0;
+  color: #6b778c;
+}
+
+.action-button .button.draft:hover {
+  background-color: #626988;
+  color: white;
+}
+
+.action-button .button.submit {
+  background-color: #ec1358;
+  color: white;
+}
+
+.action-button .button.submit:hover {
+  background-color: #96173f;
+}

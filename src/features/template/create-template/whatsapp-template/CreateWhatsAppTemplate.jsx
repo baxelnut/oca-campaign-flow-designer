@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Breadcrumbs from '../../page-components/Breadcrumbs';
 import './CreateWhatsAppTemplate.css';
+import ActionButton from './ActionButton';
 
 export default function CreateWhatsAppTemplate() {
   const navigate = useNavigate();
@@ -10,9 +11,9 @@ export default function CreateWhatsAppTemplate() {
 
   return (
     <div className="wa-template">
-      <h2>Create Template</h2>
+      <h2>Create WhatsApp Template</h2>
       <Breadcrumbs path={path} currentPath={currentPath} />
-      
+      <ActionButton/>
     </div>
   );
 }
