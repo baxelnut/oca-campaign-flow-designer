@@ -126,7 +126,7 @@
   background-color: white;
   border: 1px solid #6b778c;
   border-radius: 8px;
-  width: 50vh;
+  width: 60vh;
   height: 5vh;
   padding-inline: 10px;
 }
@@ -146,8 +146,20 @@
   padding-inline: 16px;
 }
 
-.header .dropdown {
+.leading .dropdown {
   font-weight: 200;
   font-size: 12px;
 }
 
+.template-name,
+.header {
+  margin-bottom: 20px;
+}
+
+.leading .body .dropdown {
+  width: 70vh;
+}
+
+.body .quill {
+  margin-top: 10px;
+}
