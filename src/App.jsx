@@ -4,7 +4,7 @@ import NavbarHeader from './components/navigator/NavbarHeader';
 import NavbarSide from './components/navigator/NavbarSide';
 import Dashboard from './features/dashboard/Dashboard';
 import Contact from './features/contact/ContactPage';
-import Broadcast from './features/BroadcastPage';
+import Broadcast from './features/broadcast/BroadcastPage';
 import Template from './features/template/TemplatePage';
 import Statistic from './features/StatisticPage';
 import PageNotFound from './features/PageNotFound';
@@ -21,9 +21,11 @@ function App() {
     { path: '/template', Component: Template },
     { path: '/statistic', Component: Statistic },
     { path: '/template/create', Component: CreateTemplate },
-    { path: '/template/create/whatsapp_template', Component: CreateWhatsAppTemplate },
+    {
+      path: '/template/create/whatsapp_template',
+      Component: CreateWhatsAppTemplate,
+    },
     { path: '/template/create/email_template', Component: CreateEmailTemplate },
-    
   ];
 
   return (

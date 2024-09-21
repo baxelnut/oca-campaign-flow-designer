@@ -1,0 +1,58 @@
+.broadcast-page {
+  position: absolute;
+  top: 80px;
+  left: 15%;
+  right: 0%;
+  height: 100vh;
+  padding-bottom: 80px;
+  margin-inline: 2%;
+  text-align: left;
+  color: black;
+}
+
+.bottom-button-container {
+  margin-top: 30px;
+  display: flex;
+}
+
+.bottom-button-container button {
+  margin-inline: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.draft {
+  background-color: #ebecf0;
+  color: #6b778c;
+  font-weight: bold;
+}
+
+.failed {
+  background-color: #fef3f6;
+  color: #ba0e44;
+  border: 2px solid #ba0e44;
+}
+
+.create {
+  border: 1px solid #ba0e44;
+  background-color: #a5132f;
+  color: white;
+  font-weight: bold;
+}
+
+.create img {
+  margin-inline: 10px;
+}
+
+.broadcast-page .group {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  height: fit-content;
+  text-align: center;
+}
+
+.channel {
+    margin-block: 10vh;
+}

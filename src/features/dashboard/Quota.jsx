@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './Dashboard.css';
 
 export default function Quota() {
   const [items, setItems] = useState([]);

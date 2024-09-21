@@ -156,7 +156,6 @@
   max-height: fit-content;
   overflow-y: auto;
   overflow-x: auto;
-  
 }
 
 table {
@@ -189,7 +188,8 @@ td a:hover {
 
 tbody tr:nth-child() {
   background-color: #ffffff;
-} tbody tr td {
+}
+tbody tr td {
   font-size: 0.9rem;
   color: #3b3b3b;
 }
