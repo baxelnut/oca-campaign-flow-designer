@@ -14,7 +14,7 @@ export default function LeadingBody() {
             Enter the text for your message in the language you’ve selected.
           </label>
           <ReactQuill
-          className='quill'
+          className='body-quill'
             id="body"
             theme="snow"
             value={value}

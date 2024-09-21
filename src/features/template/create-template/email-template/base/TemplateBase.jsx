@@ -23,7 +23,6 @@ export default function TemplateBase() {
     });
   };
 
-  // Function to render the content based on the selected menu
   const renderContent = () => {
     switch (selectedMenu) {
       case 'Layout':
@@ -35,7 +34,7 @@ export default function TemplateBase() {
       case 'Comment':
         return <Comment />;
       default:
-        return <Layout />; // Default to Layout if none match
+        return <Layout />;
     }
   };
 
@@ -71,7 +70,7 @@ export default function TemplateBase() {
             selectedMenu={selectedMenu}
             onMenuClick={setSelectedMenu}
           />
-          {renderContent()} {/* Render selected content dynamically */}
+          {renderContent()}
         </div>
       </div>
     </div>

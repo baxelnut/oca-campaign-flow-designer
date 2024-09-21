@@ -130,11 +130,11 @@
 }
 
 .component-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-    padding-inline: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  padding-inline: 30px;
 }
 
 .component-content .component-item img {
@@ -156,10 +156,41 @@
   align-items: center;
   font-size: 12px;
   color: #666666;
-
 }
 
 .component-content .component-item:hover {
-    background-color: #dddddd;
-    color: black;
+  background-color: #dddddd;
+  color: black;
+}
+
+.base-content-menu-quill {
+  margin: 30px;
+  height: 50vh;
+}
+
+.base-comment {
+  padding-inline: 30px;
+}
+
+.base-comment .comment {
+  border-bottom: 1px solid #000000;
+}
+
+.base-comment h4 {
+  font-weight: 300;
+  color: black;
+  font-size: 14px;
+}
+
+.base-comment p {
+  font-weight: 300;
+  color: #7d7d7d;
+  font-size: 12px;
+}
+
+.base-comment  button {
+    color: #6B778C;
+    background-color: #EBECF0;
+    font-weight: bold;
+    margin-top: 20px;
 }
