@@ -14,6 +14,7 @@ export default function TemplateBase() {
   });
 
   const [selectedMenu, setSelectedMenu] = useState('Layout');
+  const [showPopup, setShowPopup] = useState(false);
 
   const toggleSidebar = () => {
     setIsCollapsed((prevState) => {
@@ -21,6 +22,14 @@ export default function TemplateBase() {
       localStorage.setItem('sidebarCollapsed', JSON.stringify(newState));
       return newState;
     });
+  };
+
+  const handleIconClick = () => {
+    setShowPopup(true);
+  };
+
+  const handleClose = () => {
+    setShowPopup(false);
   };
 
   const renderContent = () => {
@@ -45,14 +54,18 @@ export default function TemplateBase() {
           <div className="back-button">
             <img src="/icons/back.svg" alt="back" />
           </div>
-          <img
-            className="navbar_ai_left"
-            src="/util/navbar_ai_left.svg"
-            alt="navbar"
-          />
+          {showPopup == false ? (
+            <img
+              className="navbar_ai_left"
+              src="/util/navbar_ai_left.svg"
+              alt="navbar"
+              onClick={handleIconClick}
+            />
+          ) : null}
         </div>
         <div className="canvas"></div>
       </div>
+
       <div className="base-right">
         <div
           className={`sidebar-thingy ${isCollapsed ? 'collapsed' : ''}`}
@@ -73,6 +86,41 @@ export default function TemplateBase() {
           {renderContent()}
         </div>
       </div>
+
+      {/* Popup */}
+      {showPopup && (
+        <div className="chat-popup-left slide-in-left">
+          <div className="chat-header">
+            <p>OCA Left Popup</p>
+            <button onClick={handleClose}>×</button>
+          </div>
+          <div className="chat-body">
+            <div className="chat-message-bot">
+              <p>Halo, Selamat datang</p>
+              <span>
+                OCA AI Copywriting membantu anda menemukan ide kalimat.
+              </span>
+            </div>
+            <div className="chat-message-user">
+              <p>
+                Bantu saya buatkan ide kalimat promosi produk jasa desain web
+                untuk platform email ataupun WhatsApp
+              </p>
+            </div>
+            <div className="chat-message-bot">
+              <p>
+                Tentu, saya bantu buatkan beberapa contoh copywriting untuk jasa
+                desain web yang bisa Anda gunakan untuk platform email atau
+                WhatsApp...
+              </p>
+            </div>
+          </div>
+          <div className="chat-footer">
+            <input type="text" placeholder="Type a message..." />
+            <button>Send</button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
