@@ -8,3 +8,40 @@
   text-align: left;
   color: black;
 }
+
+.email-template .base {
+    
+    width: 100%;
+    height: fit-content;
+    margin-block: 5vh;
+    display: flex;
+   
+}
+
+.base-left {
+    flex: 2;
+    background-color: #CECECE30;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-left: 2vh;
+}
+
+.base-right {
+    flex: 1;
+    background-color: blue;
+    margin-right: 2vh;
+}
+
+.base-left .canvas {
+    background-color: white;
+    width: 60vh;
+    height: 80vh;
+    margin: 10vh;
+    box-shadow: 0px 0px 10px 0px #00000040;
+
+}
+
+.navbar_ai_left {
+    margin-left: -20px;
+}

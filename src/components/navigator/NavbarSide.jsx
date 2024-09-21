@@ -57,7 +57,6 @@ export default function NavbarSide() {
           src={`/icons/arrow_${
             isCollapsed ? 'right' : 'left'
           }_double.svg`}
-          alt="toggle-sidebar"
         />
       </div>
     </div>
