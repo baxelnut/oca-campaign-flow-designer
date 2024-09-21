@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ReactQuill from 'react-quill';
-import 'react-quill/dist/quill.snow.css'; // Import Quill styles
+import 'react-quill/dist/quill.snow.css'; 
 
 export default function LeadingBody() {
   const [value, setValue] = useState('');
