@@ -67,7 +67,7 @@
   opacity: 0;
 }
 
-.sidebar-thingy {
+.navbar-side .sidebar-thingy {
   position: fixed;
   display: flex;
   justify-content: center;

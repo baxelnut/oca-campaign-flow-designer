@@ -12,6 +12,7 @@ export default function CreateEmailTemplate() {
       <h2>Create Email Template</h2>
       <Breadcrumbs path={path} currentPath={currentPath} />
       <TemplateBase/>
+      
     </div>
   );
   re;

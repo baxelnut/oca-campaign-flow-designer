@@ -7,6 +7,7 @@ export default function NavbarSide() {
     const savedState = localStorage.getItem('sidebarCollapsed');
     return savedState ? JSON.parse(savedState) : false;
   });
+
   const [selectedMenu, setSelectedMenu] = useState('dashboard');
   const location = useLocation();
 
@@ -54,9 +55,7 @@ export default function NavbarSide() {
       ))}
       <div className="sidebar-thingy" onClick={toggleSidebar}>
         <img
-          src={`/icons/arrow_${
-            isCollapsed ? 'right' : 'left'
-          }_double.svg`}
+          src={`/icons/arrow_${isCollapsed ? 'right' : 'left'}_double.svg`}
         />
       </div>
     </div>
