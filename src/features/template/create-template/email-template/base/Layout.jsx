@@ -6,7 +6,7 @@ export default function Layout() {
     for (let i = 0; i <= 7; i++) {
       content.push(
         <div className="layout-item" key={i}>
-          <img src={`/images/layout ${i + 1}.png`} />
+          <img src={`/images/layout/layout${i + 1}.png`} />
         </div>
       );
     }

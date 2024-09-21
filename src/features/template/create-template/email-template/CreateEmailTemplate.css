@@ -116,7 +116,6 @@
 }
 
 .content .layout {
-  margin: 30px;
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
@@ -128,4 +127,39 @@
   height: 150px;
   object-fit: fill;
   cursor: pointer;
+}
+
+.component-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    padding-inline: 30px;
+}
+
+.component-content .component-item img {
+  object-fit: contain;
+  height: 40px;
+  width: 40px;
+  margin-top: 10px;
+}
+
+.component-content .component-item {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  border: 2px solid #8a7ebe;
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  color: #666666;
+
+}
+
+.component-content .component-item:hover {
+    background-color: #dddddd;
+    color: black;
 }

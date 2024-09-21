@@ -3,12 +3,17 @@ import '../CreateEmailTemplate.css';
 import ActionButton from './ActionButton';
 import MenuButton from './MenuButton';
 import Layout from './Layout';
+import ComponentContent from './ComponentContent';
+import Content from './Content';
+import Comment from './Comment';
 
 export default function TemplateBase() {
   const [isCollapsed, setIsCollapsed] = useState(() => {
     const savedState = localStorage.getItem('sidebarCollapsed');
     return savedState ? JSON.parse(savedState) : false;
   });
+
+  const [selectedMenu, setSelectedMenu] = useState('Layout');
 
   const toggleSidebar = () => {
     setIsCollapsed((prevState) => {
@@ -18,14 +23,34 @@ export default function TemplateBase() {
     });
   };
 
+  // Function to render the content based on the selected menu
+  const renderContent = () => {
+    switch (selectedMenu) {
+      case 'Layout':
+        return <Layout />;
+      case 'Component':
+        return <ComponentContent />;
+      case 'Content':
+        return <Content />;
+      case 'Comment':
+        return <Comment />;
+      default:
+        return <Layout />; // Default to Layout if none match
+    }
+  };
+
   return (
     <div className="base">
       <div className="base-left">
         <div>
           <div className="back-button">
-            <img src="/icons/back.svg" />
+            <img src="/icons/back.svg" alt="back" />
           </div>
-          <img className="navbar_ai_left" src="/util/navbar_ai_left.svg" />
+          <img
+            className="navbar_ai_left"
+            src="/util/navbar_ai_left.svg"
+            alt="navbar"
+          />
         </div>
         <div className="canvas"></div>
       </div>
@@ -36,13 +61,17 @@ export default function TemplateBase() {
         >
           <img
             src={`/icons/arrow_${isCollapsed ? 'right' : 'left'}_double.svg`}
+            alt="toggle"
           />
         </div>
 
         <div className="content">
           <ActionButton />
-          <MenuButton />
-          <Layout />
+          <MenuButton
+            selectedMenu={selectedMenu}
+            onMenuClick={setSelectedMenu}
+          />
+          {renderContent()} {/* Render selected content dynamically */}
         </div>
       </div>
     </div>

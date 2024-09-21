@@ -1,20 +1,14 @@
 import React, { useState, useEffect } from 'react';
 
-export default function MenuButton() {
-  const [selectedMenu, setSelectedMenu] = useState('layout');
-
+export default function MenuButton({ selectedMenu, onMenuClick }) {
   const menus = ['Layout', 'Component', 'Content', 'Comment'];
 
   useEffect(() => {
-    const currentPath = window.location.pathname.slice(1).toLowerCase(); // Using window.location since location wasn't imported
+    const currentPath = window.location.pathname.slice(1).toLowerCase();
     const matchedMenu =
       menus.find((menu) => menu.toLowerCase() === currentPath) || 'layout';
-    setSelectedMenu(matchedMenu);
+    onMenuClick(matchedMenu);
   }, []);
-
-  const handleMenuClick = (menu) => {
-    setSelectedMenu(menu);
-  };
 
   return (
     <div className="menu-button">
@@ -24,7 +18,7 @@ export default function MenuButton() {
           <div
             key={index}
             className={`menu ${selectedMenu === menu ? 'selected' : ''}`}
-            onClick={() => handleMenuClick(menu)}
+            onClick={() => onMenuClick(menu)}
           >
             {menu}
           </div>
