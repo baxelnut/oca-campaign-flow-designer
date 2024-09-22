@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 import '../BroadcastPage.css';
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export default function BroadcastPageButton() {
   const [selectedButton, setSelectedButton] = useState('Dashboard');
-  //   const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const handleButtonClick = (buttonName) => {
     setSelectedButton(buttonName);
   };
 
-  //   const handleCreateTemplateClick = () => {
-  //     navigate('/template/create');
-  //   };
+  const handleCreate = () => {
+    navigate('/broadcast/create');
+  };
 
   return (
     <>
@@ -54,7 +54,7 @@ export default function BroadcastPageButton() {
           Failed Message
         </button>
 
-        <button className="create" type="button">
+        <button className="create" type="button" onClick={handleCreate}>
           <img src="src\assets\icons\plus.svg" />
           CREATE BROADCAST
         </button>

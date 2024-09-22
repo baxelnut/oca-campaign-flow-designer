@@ -1,0 +1,36 @@
+.create-broadcast {
+  position: absolute;
+  top: 80px;
+  left: 15%;
+  right: 0%;
+  height: 100%;
+  margin-inline: 2%;
+  text-align: left;
+  color: black;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #42526e;
+  height: fit-content;
+  padding-block: 5vh;
+  padding-inline: 10vh;
+  color: white;
+  border-radius: 5px;
+  box-shadow: 0px 8px 40px 0px #00000033;
+}
+
+.container h4 {
+  width: 150px;
+  border-bottom: 1px solid white;
+  padding-block: 10px;
+}
+
+.container .item.button {
+  color: #ba0e44;
+  background-color: #efe0e4;
+  border-radius: 8px;
+  padding: 10px;
+}

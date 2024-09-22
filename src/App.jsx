@@ -12,12 +12,14 @@ import FeedbackNav from './components/util/FeedbackNav';
 import CreateTemplate from './features/template/create-template/CreateTemplatePage';
 import CreateWhatsAppTemplate from './features/template/create-template/whatsapp-template/CreateWhatsAppTemplate';
 import CreateEmailTemplate from './features/template/create-template/email-template/CreateEmailTemplate';
+import CreateBroadcast from './features/broadcast/create-broadcast/CreateBroadcast';
 
 function App() {
   const components = [
     { path: '/dashboard', Component: Dashboard },
     { path: '/contact', Component: Contact },
     { path: '/broadcast', Component: Broadcast },
+    { path: '/broadcast/create', Component: CreateBroadcast },
     { path: '/template', Component: Template },
     { path: '/statistic', Component: Statistic },
     { path: '/template/create', Component: CreateTemplate },
