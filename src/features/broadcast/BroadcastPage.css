@@ -8,6 +8,7 @@
   margin-inline: 2%;
   text-align: left;
   color: black;
+  margin-bottom: 100px;
 }
 
 .bottom-button-container {
@@ -65,7 +66,8 @@
 }
 
 .channel-content .line {
-  margin-inline: 10px;
+  margin-inline: 20px;
+  margin-bottom: 10px;
 }
 
 .channel .title {
@@ -74,10 +76,11 @@
   margin-bottom: 10px;
 }
 
-.template-channel.whatsapp {
+.template-channel {
   background-color: white;
   box-shadow: 0px 6px 10px 4px #00000026;
   border-radius: 8px;
+  margin-bottom: 5vh;
 }
 
 .channel-head {
@@ -94,7 +97,6 @@
 
 .channel-head h2 {
   margin-inline: 30px;
-  color: #297837;
 }
 
 .channel-content .detail {
@@ -106,47 +108,47 @@
   margin-inline: 30px;
 }
 
-.head .content {
+.head {
   margin: 0;
   margin-top: 30px;
   width: 100%;
 }
 
-.wa-channel-table {
+.channel-table {
   margin-block: 2%;
 }
 
-.wa-channel-table table {
+.channel-table table {
   border-collapse: collapse;
 }
 
-.wa-channel-table th,
-.wa-channel-table td {
+.channel-table th,
+.channel-table td {
   padding: 12px;
   border: 1px solid #ddd;
   text-align: left;
 }
 
-.wa-channel-table .campaign-info {
+.channel-table .campaign-info {
   display: flex;
   align-items: center;
 }
 
-.wa-channel-table .campaign-info img {
+.channel-table .campaign-info img {
   width: 30px;
   height: 30px;
   margin-right: 10px;
 }
 
-.wa-channel-table .follow-up {
+.channel-table .follow-up {
   display: flex;
   flex-wrap: wrap;
 }
 
-.wa-channel-table td .method,
-.wa-channel-table td .follow-up,
-.wa-channel-table td .status,
-.wa-channel-table td .strategy {
+.channel-table td .method,
+.channel-table td .follow-up,
+.channel-table td .status,
+.channel-table td .strategy {
   display: flex;
   border-radius: 100px;
   padding: 8px;
@@ -157,69 +159,129 @@
   margin: 0;
 }
 
-.wa-channel-table .method.scheduler {
+.channel-table .method.scheduler {
   background-color: #f6a0bb;
   color: black;
 }
 
-.wa-channel-table .method.instant {
+.channel-table .method.instant {
   color: black;
   background-color: white;
   border: 1px solid #6b778c;
 }
 
-.wa-channel-table .follow-up.success {
+.channel-table .follow-up.success {
   color: red;
 }
 
-.wa-channel-table .follow-up.error {
+.channel-table .follow-up.error {
   color: red;
 }
 
-.wa-channel-table .status.processing {
+.channel-table .status.processing {
   background-color: #6b778c;
   color: white;
 }
 
-.wa-channel-table .status.delivered {
+.channel-table .status.delivered {
   background-color: #35b86d;
   color: white;
 }
 
-.wa-channel-table .status.finish {
+.channel-table .status.finish {
   background-color: #ffc400;
   color: white;
 }
 
-.wa-channel-table .strategy.click {
+.channel-table .strategy.click {
   background-color: #227dd3;
 }
 
-.wa-channel-table .strategy.open {
+.channel-table .strategy.open {
   background-color: #9747ff;
 }
 
-.wa-channel-table .strategy.read {
+.channel-table .strategy.read {
   background-color: #332b76;
 }
 
-.wa-channel-table .action {
+.channel-table .action {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   height: 80px;
 }
 
-.wa-channel-table .action a {
+.channel-table .action a {
   margin-right: 5px;
   text-decoration: underline;
 }
 
-.wa-channel-table .delete-btn {
+.channel-table .delete-btn {
   background-color: red;
   color: white;
   border: none;
   padding: 5px 10px;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.channel .broadcast-form {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.channel .broadcast-form .search {
+  color: black;
+  font-weight: bold;
+}
+
+.channel .broadcast-form select,
+.channel .broadcast-form input {
+  width: 300px;
+  height: 40px;
+  background-color: white;
+  border: 1px solid #c1c7d0;
+  gap: 10px;
+  border-radius: 8px;
+  font-weight: 100;
+  color: #c1c7d0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header {
+  width: 100%;
+}
+
+.header .head-item {
+  margin-inline: 5%;
+  display: flex;
+  align-items: center;
+}
+
+.header .head-item img {
+  margin-right: 1%;
+  padding-right: 1%;
+  border-right: 1px solid #c1c7d0;
+  width: 5%;
+  justify-content: center;
+}
+
+
+.header .head-item p {
+  color: #6b778c;
+  margin-top: 0;
+}
+
+.header .head-item h2 {
+  margin-bottom: 0;
+  color: #091e42;
+}
+
+.header .details {
+  margin-bottom: 5%;
+  margin-top: 20px;
 }

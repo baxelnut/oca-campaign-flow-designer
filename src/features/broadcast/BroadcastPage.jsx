@@ -4,8 +4,7 @@ import '../dashboard/Dashboard.css';
 import BroadcastPageButton from './page-component/BroadcastPageButton';
 import Quota from '../dashboard/Quota';
 import SuccessRate from '../dashboard/SuccessRate';
-import WhatsAppChannel from './page-component/WhatsAppChannel';
-import EmailChannel from './page-component/EmailChannel';
+import Channels from './page-component/Channels';
 
 export default function BroadcastPage() {
   return (
@@ -21,8 +20,8 @@ export default function BroadcastPage() {
           <h2>Channel</h2>
           <div className="line"></div>
         </div>
-        <WhatsAppChannel />
-        <EmailChannel />
+        <Channels/>
+        
       </div>
     </div>
   );
