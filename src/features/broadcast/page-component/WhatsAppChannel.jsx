@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import ChannelTable from './ChannelTable';
+import WAChannelTable from './WAChannelTable';
 
 export default function WhatsAppChannel() {
   const [isCollapsed, setIsCollapsed] = useState(() => {
@@ -16,16 +16,16 @@ export default function WhatsAppChannel() {
   };
 
   return (
-    <div className="template-channel whatsapp" onClick={toggleChannel}>
-      <div className="channel-head">
+    <div className="template-channel whatsapp">
+      <div className="channel-head" onClick={toggleChannel}>
         <h2>WhatsApp</h2>
         <img src={`/icons/arrow_${isCollapsed ? 'down' : 'up'}.svg`} />
       </div>
       {isCollapsed && (
         <div className="channel-content">
           <div className="line"></div>
-          <div className="head">
-            <ChannelTable />
+          <div className="detail">
+            <WAChannelTable />
           </div>
         </div>
       )}

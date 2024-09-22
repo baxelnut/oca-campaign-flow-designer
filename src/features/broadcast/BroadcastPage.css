@@ -84,6 +84,8 @@
   display: flex;
   margin: 0;
   align-items: center;
+  cursor: pointer;
+  width: fit-content;
 }
 
 .channel-head img {
@@ -95,7 +97,7 @@
   color: #297837;
 }
 
-.channel-content .head {
+.channel-content .detail {
   /* background-color: #ebf8f0; */
   align-items: center;
   display: flex;
@@ -108,8 +110,116 @@
   margin: 0;
   margin-top: 30px;
   width: 100%;
-
 }
 
-.head {
+.wa-channel-table {
+  margin-block: 2%;
+}
+
+.wa-channel-table table {
+  border-collapse: collapse;
+}
+
+.wa-channel-table th,
+.wa-channel-table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.wa-channel-table .campaign-info {
+  display: flex;
+  align-items: center;
+}
+
+.wa-channel-table .campaign-info img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.wa-channel-table .follow-up {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.wa-channel-table td .method,
+.wa-channel-table td .follow-up,
+.wa-channel-table td .status,
+.wa-channel-table td .strategy {
+  display: flex;
+  border-radius: 100px;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 500;
+  margin: 0;
+}
+
+.wa-channel-table .method.scheduler {
+  background-color: #f6a0bb;
+  color: black;
+}
+
+.wa-channel-table .method.instant {
+  color: black;
+  background-color: white;
+  border: 1px solid #6b778c;
+}
+
+.wa-channel-table .follow-up.success {
+  color: red;
+}
+
+.wa-channel-table .follow-up.error {
+  color: red;
+}
+
+.wa-channel-table .status.processing {
+  background-color: #6b778c;
+  color: white;
+}
+
+.wa-channel-table .status.delivered {
+  background-color: #35b86d;
+  color: white;
+}
+
+.wa-channel-table .status.finish {
+  background-color: #ffc400;
+  color: white;
+}
+
+.wa-channel-table .strategy.click {
+  background-color: #227dd3;
+}
+
+.wa-channel-table .strategy.open {
+  background-color: #9747ff;
+}
+
+.wa-channel-table .strategy.read {
+  background-color: #332b76;
+}
+
+.wa-channel-table .action {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 80px;
+}
+
+.wa-channel-table .action a {
+  margin-right: 5px;
+  text-decoration: underline;
+}
+
+.wa-channel-table .delete-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
 }
