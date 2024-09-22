@@ -17,7 +17,10 @@ export default function BroadcastPage() {
         <SuccessRate />
       </div>
       <div className="channel">
-        <h2>Channel</h2>
+        <div className='title'>
+          <h2>Channel</h2>
+          <div className="line"></div>
+        </div>
         <WhatsAppChannel />
         <EmailChannel />
       </div>

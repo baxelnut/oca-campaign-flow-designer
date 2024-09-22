@@ -1,0 +1,14 @@
+[
+  {
+    "title": "WhatsApp",
+    "description": "Remaining Quota: 420 | Expired on 18th October 2024",
+    "bottom": "#35B86D",
+    "background": "#EBF8F0"
+  },
+  {
+    "title": "Email",
+    "description": "Remaining Quota: 420 | Expired on 18th October 2024",
+    "bottom": "#F6A0BB",
+    "background": "#FEF3F6"
+  }
+]

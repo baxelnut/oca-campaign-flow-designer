@@ -1,16 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import TemplateTable from '../page-components/TemplateTable';
-import TemplateCard from '../page-components/TemplateCard';
-import TemplateForm from '../page-components/TemplateForm';
 
-export default function TemplateContent() {
+export default function ChannelTable() {
   const [items, setItems] = useState([]);
   const [filteredItems, setFilteredItems] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [dateRange, setDateRange] = useState('');
 
   useEffect(() => {
-    fetch('src/data/template_header.txt')
+    fetch('src/data/wa_channel.txt')
       .then((response) => response.text())
       .then((data) => {
         const parsedData = JSON.parse(data);
@@ -58,52 +55,33 @@ export default function TemplateContent() {
 
   return (
     <div className="content">
-      {items.map((item, index) => (
-        <React.Fragment key={index}>
-          <div
-            className="header"
-            style={{
-              background: item.background,
-            }}
-          >
-            <div
-              className="head-item"
-              style={{ borderBottom: `8px solid ${item.bottom}` }}
-            >
-              <img
-                src={`/icons/${item.title.toLowerCase()}.svg`}
-                alt={`${item.title} icon`}
-              />
-              <div>
-                <h2>{item.title}</h2>
-                <p>{item.description}</p>
+      {items.map(
+        (item, index) =>
+          index === 0 && (
+            <React.Fragment key={index}>
+              <div
+                className="header"
+                style={{
+                  background: item.background,
+                }}
+              >
+                <div
+                  className="head-item"
+                  style={{ borderBottom: `8px solid ${item.bottom}` }}
+                >
+                  <img
+                    src={`/icons/${item.title.toLowerCase()}.svg`}
+                    alt={`${item.title} icon`}
+                  />
+                  <div>
+                    <h2>{item.title}</h2>
+                    <p>{item.description}</p>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <TemplateForm
-            onSearchChange={(value) => setSearchTerm(value)}
-            onDateChange={(value) => setDateRange(value)}
-          />
-          <div className="details">
-            {filteredItems.length > 0 &&
-            filteredItems.some(
-              (filteredItem) => filteredItem.title === item.title
-            ) ? (
-              <>
-                {/* Render the "details" content here */}
-                <p>{item.additionalDetails}</p>
-                {item.title === 'WhatsApp' ? (
-                  <TemplateTable />
-                ) : (
-                  <TemplateCard />
-                )}
-              </>
-            ) : (
-              <p>No matching details</p>
-            )}
-          </div>
-        </React.Fragment>
-      ))}
+            </React.Fragment>
+          )
+      )}
     </div>
   );
 }
