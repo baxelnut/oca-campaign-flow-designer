@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Pagination from '../../../components/util/Pagination';
+import { Chart } from 'chart.js';
+import DummyStatistic from './DummyStatistic';
 
 export default function Channels() {
   const [items, setItems] = useState([]);
@@ -7,7 +9,7 @@ export default function Channels() {
   const [searchTerm, setSearchTerm] = useState('');
   const [dateRange, setDateRange] = useState('');
 
-  Channels
+  Channels;
   const [isCollapsed, setIsCollapsed] = useState(() => {
     const savedState = localStorage.getItem('channelCollapsed');
     return savedState ? JSON.parse(savedState) : {};
@@ -296,6 +298,15 @@ export default function Channels() {
                       handlePageChange={setCurrentPage}
                     />
                   </div>
+                </div>
+                <div className='stat'>
+                  <div
+                    className="stat-head"
+                    style={{ background: index === 0 ? '#297837' : '#BA0E44' }}
+                  >
+                    <h3>{`${item.title} Statistic`}</h3>
+                  </div>
+                  <DummyStatistic />
                 </div>
               </div>
             )}
