@@ -2,17 +2,18 @@ import React, { useState } from 'react';
 // import { useNavigate } from 'react-router-dom';
 import './CreateBroadcast.css';
 import Breadcrumbs from '../../template/page-components/Breadcrumbs';
+import MessagesForm from './MessagesForm';
 
 export default function CreateBroadcast() {
   //   const navigate = useNavigate();
   const path = 'Broadcast/Create';
   const currentPath = '/broadcast/create';
 
-  const [isClicked, setIsClicked] = useState(false);
+  const [isClicked, setIsClicked] = useState(true);
 
   function handleOnClick() {
     setIsClicked(!isClicked);
-    console.log(isClicked)
+    console.log(isClicked);
   }
 
   return (
@@ -55,7 +56,13 @@ export default function CreateBroadcast() {
           Get the Form!
         </button>
       </div>
-      {isClicked ? <div className="container2"></div> : null}
+      {isClicked ? (
+        <div className="container2"></div>
+      ) : (
+        <div className="container2 active">
+          <MessagesForm />
+        </div>
+      )}
     </div>
   );
 }
