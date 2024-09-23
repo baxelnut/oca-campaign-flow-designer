@@ -34,3 +34,11 @@
   border-radius: 8px;
   padding: 10px;
 }
+
+.container2 {
+  background: #EAEAEA5E;
+  width: 100%;
+  height: 100%;
+  margin-block: 5vh;
+
+}

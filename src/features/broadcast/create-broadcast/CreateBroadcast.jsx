@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 // import { useNavigate } from 'react-router-dom';
 import './CreateBroadcast.css';
 import Breadcrumbs from '../../template/page-components/Breadcrumbs';
@@ -7,6 +7,13 @@ export default function CreateBroadcast() {
   //   const navigate = useNavigate();
   const path = 'Broadcast/Create';
   const currentPath = '/broadcast/create';
+
+  const [isClicked, setIsClicked] = useState(false);
+
+  function handleOnClick() {
+    setIsClicked(!isClicked);
+    console.log(isClicked)
+  }
 
   return (
     <div className="create-broadcast">
@@ -44,8 +51,11 @@ export default function CreateBroadcast() {
             </p>
           </div>
         </div>
-        <button className="item button">Get the Form!</button>
+        <button className="item button" onClick={handleOnClick}>
+          Get the Form!
+        </button>
       </div>
+      {isClicked ? <div className="container2"></div> : null}
     </div>
   );
 }
