@@ -1,0 +1,345 @@
+{
+	"info": {
+		"_postman_id": "39fe42c8-1e39-42dc-bb76-c289b006b7e8",
+		"name": "Digistar OCA Blast",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35371686"	
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"user2@example.com\",\n    \"phoneNumber\": \"0812312312345\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/users/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Phone Number",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/users/phone-numbers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"phone-numbers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Emails",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/users/emails",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"emails"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User by ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"testnew@gmail.com\",\n    \"phoneNumber\": \"0812312312\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/users/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/users/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Template",
+			"item": [
+				{
+					"name": "Template Message Gemini API",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"campaignName\": \"Summer Sales Campaign\",\n    \"contentDetail\": {\n        \"templateType\": \"email\",\n        \"audience\": {\n            \"segment\": \"young_adults\",\n            \"age\": {\n                \"min\": 20,\n                \"max\": 25\n            },\n            \"preference\": {\n                \"tone\": \"casual\",\n                \"language\": \"indonesia\"\n            }\n        },\n        \"productDetail\": {\n            \"productName\": \"Super Widget Pro\",\n            \"description\": \"The best widget for all your needs, now with extra features.\"\n        },\n        \"additionalNote\": \"Highlight the limited-time discount offer in the message.\",\n        \"length\": \"short\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/template-messages",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"template-messages"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Campaign",
+			"item": [
+				{
+					"name": "Campaign",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"campaignName\": \"Summer Sale Campaign\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/campaigns",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"campaigns"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Blast Campaign",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"campaignId\": 3,\n    \"users\": [\n        {\n            \"email\": \"user1@example.com\",\n            \"phoneNumber\": \"08123123123\"\n        },\n        {\n            \"email\": \"user2@example.com\",\n            \"phoneNumber\": \"0812312312345\"\n        }\n    ],\n    \"stages\": [\n        {\n            \"stageName\": \"Initial Email Blast\",\n            \"channel\": \"email\",\n            \"template\": {\n                \"subject\": \"Summer Sale - Don't Miss Out!\",\n                \"body\": \"Hi name, check out our exclusive summer deals! Click here: name\"\n            },\n            \"condition\": {\n                \"type\": \"always\"\n            }\n        },\n        {\n            \"stageName\": \"Follow-up Email After Click\",\n            \"channel\": \"email\",\n            \"template\": {\n                \"subject\": \"More Great Deals Inside!\",\n                \"body\": \"Thanks for checking out our summer sale. Here's more just for you!\"\n            },\n            \"condition\": {\n                \"type\": \"afterClick\",\n                \"previousStageIndex\": 0,\n                \"waitTime\": 3000\n            }\n        },\n        {\n            \"stageName\": \"WhatsApp Reminder\",\n            \"channel\": \"whatsapp\",\n            \"template\": {\n                \"message\": \"Don't miss out on our summer sale! Visit us now!\"\n            },\n            \"condition\": {\n                \"type\": \"afterTime\",\n                \"previousStageIndex\": 1,\n                \"waitTime\": 0\n            }\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/blast",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"blast"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send Email Test",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Raihan Romzi\",\n  \"email\": \"raihan.rakhman16@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/email",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"email"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send Email",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"contacts\": \"6282117775210\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/whatsapp",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"whatsapp"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
